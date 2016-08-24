@@ -10,5 +10,4 @@ ar -r librocksdbswigwrap.a rocksdbswig_wrap.o
 
 cd ..
 
-export CGO_LDFLAGS="-L./cc -lrocksdbswigwrap -lrocksdb -lstdc++"
-go build -x .
+python add_cgo_flags.py rocksdbswig.go
